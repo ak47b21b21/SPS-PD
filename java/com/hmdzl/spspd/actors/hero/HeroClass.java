@@ -793,12 +793,14 @@ public enum HeroClass {
             (hero.belongings.weapon = new Sling()).identify();
             (hero.belongings.armor = new VestArmor()).identify();
 
+	hero.STR += 24;
+	Dungeon.gold += 10000;
             new ShootGun().identify().collect();
             new JumpS().collect();
             EmpBola empbola = new EmpBola(3);
             empbola.identify().collect();
-            hero.hitSkill = hero.hitSkill + 4;
-            hero.evadeSkill = hero.evadeSkill + 2;
+            hero.hitSkill = hero.hitSkill + 40;
+            hero.evadeSkill = hero.evadeSkill + 20;
 
         }else {
 			(hero.belongings.weapon = new Knuckles()).identify();
